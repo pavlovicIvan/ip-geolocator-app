@@ -12,7 +12,7 @@ const Header = () => (
   <div className="containerMainCenter">
     <div>
       <a
-        href="https://github.com/pavlovicIvan"
+        href="https://github.com/pavlovicIvan/ip-geolocator-app"
         target="_blank"
         rel="noreferrer"
       >
