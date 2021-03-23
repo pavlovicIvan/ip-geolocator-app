@@ -32,14 +32,11 @@ const Geolocator = () => {
   return (
     <div className="containerMain">
       <form onSubmit={(event) => handleSearch(event)}>
-        <label>
-          Enter IP
-          <input
-            type="text"
-            value={customIP}
-            onChange={(event) => setCustopmIP(event.target.value)}
-          />
-        </label>
+        <input
+          type="text"
+          value={customIP}
+          onChange={(event) => setCustopmIP(event.target.value)}
+        />
         <input type="submit" value="SEARCH" />
       </form>
       <table>
@@ -52,19 +49,21 @@ const Geolocator = () => {
           ))}
         </tbody>
       </table>
-      {result && (
-        <Map
-          height={300}
-          center={[result.latitude, result.longitude]}
-          defaultZoom={13}
-        >
-          <Marker
-            width={50}
-            color="#fc0349"
-            anchor={[result.latitude, result.longitude]}
-          />
-        </Map>
-      )}
+      <div className="mapWrap">
+        {result && (
+          <Map
+            height={300}
+            center={[result.latitude, result.longitude]}
+            defaultZoom={13}
+          >
+            <Marker
+              width={50}
+              color="#fc0349"
+              anchor={[result.latitude, result.longitude]}
+            />
+          </Map>
+        )}
+      </div>
     </div>
   );
 };

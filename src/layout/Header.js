@@ -6,7 +6,7 @@ import githubImg from "../assets/images/github.svg";
 import linkedinImg from "../assets/images/linkedin.svg";
 
 // Custom components
-// import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo.png";
 
 const Header = () => (
   <div className="containerMainCenter">
@@ -26,7 +26,7 @@ const Header = () => (
         <img className="linkImg" alt="github logo" src={linkedinImg} />
       </a>
     </div>
-    {/*  <img className="logo" src={Logo} alt="qr generator logo" /> */}
+    <img className="logo" src={Logo} alt="logo" />
   </div>
 );
 
