@@ -44,6 +44,8 @@ html {
 
 table {
   border-collapse: collapse;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 td,
@@ -55,4 +57,26 @@ th {
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+
+form {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 0.8rem;
+  margin-right: 0.8rem;
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+
+input[type="submit"] {
+  padding: 0.8rem;
+  border: 1px solid #dddddd;
+}
+
+.mapWrap {
+  border: 1px solid #dddddd;
 }
