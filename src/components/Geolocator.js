@@ -1,11 +1,11 @@
 // React
 import React, { useState, useEffect } from "react";
 
-// Maps
-import { Map, Marker } from "pigeon-maps";
-
 // Custom functions
 import { callApi, formatKey } from "../helpers/functions";
+
+// Custom components
+import MapView from "./MapView";
 
 // Custom strings
 const api = "https://freegeoip.app/json/";
@@ -39,31 +39,26 @@ const Geolocator = () => {
         />
         <input type="submit" value="SEARCH" />
       </form>
-      <table>
-        <tbody>
-          {Object.entries(result).map(([key, value]) => (
-            <tr key={key}>
-              <th>{formatKey(key)}</th>
-              <td>{value}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className="mapWrap">
-        {result && (
-          <Map
-            height={300}
-            center={[result.latitude, result.longitude]}
-            defaultZoom={13}
-          >
-            <Marker
-              width={50}
-              color="#fc0349"
-              anchor={[result.latitude, result.longitude]}
-            />
-          </Map>
-        )}
-      </div>
+      {loading ? (
+        <>
+          <div className="skeletonTable" />
+          <div className="skeletonMap" />
+        </>
+      ) : (
+        <>
+          <table>
+            <tbody>
+              {Object.entries(result).map(([key, value]) => (
+                <tr key={key}>
+                  <th>{formatKey(key)}</th>
+                  <td>{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <MapView result={result} />
+        </>
+      )}
     </div>
   );
 };
