@@ -116,3 +116,20 @@ input[type="submit"] {
   height: 300px;
   width: 300px;
 }
+
+@media (min-width: 600px) {
+  table {
+    width: 50vw;
+    max-width: none;
+  }
+
+  .skeletonTable {
+    width: 50vw;
+    max-width: none;
+  }
+
+  .skeletonMap {
+    width: 50vw;
+    max-width: none;
+  }
+}
