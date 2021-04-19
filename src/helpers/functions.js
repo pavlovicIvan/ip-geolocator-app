@@ -1,11 +1,11 @@
-export const callApi = (url, setLoading, setJobs) => {
+export const callApi = (url, setLoading, setResponse) => {
   setLoading(true);
   fetch(url)
     .then((res) => res.json())
     .then(
       (result) => {
         setLoading(false);
-        setJobs(result);
+        setResponse(result);
       },
       (error) => {
         console.log("error", error);

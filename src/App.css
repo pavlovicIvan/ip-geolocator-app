@@ -43,9 +43,11 @@ html {
 }
 
 table {
+  margin-top: 2rem;
   border-collapse: collapse;
   margin-bottom: 1rem;
   width: 100%;
+  max-width: 300px;
 }
 
 td,
@@ -60,7 +62,7 @@ tr:nth-child(even) {
 }
 
 form {
-  margin: 2rem 0;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -82,6 +84,16 @@ input[type="submit"] {
   border: 1px solid #dddddd;
 }
 
+.validationText {
+  background-color: #dc0101;
+  padding: 0.4rem;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 .mapWrap {
   border: 1px solid #dddddd;
   margin-bottom: 1rem;
@@ -91,8 +103,9 @@ input[type="submit"] {
   border: 1px solid #c4c4c4;
   background-color: #f5f5f5;
   border-radius: 3px;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem 0;
   height: 375px;
+  width: 300px;
 }
 
 .skeletonMap {
@@ -101,4 +114,22 @@ input[type="submit"] {
   border-radius: 3px;
   margin-bottom: 1rem;
   height: 300px;
+  width: 300px;
+}
+
+@media (min-width: 600px) {
+  table {
+    width: 50vw;
+    max-width: none;
+  }
+
+  .skeletonTable {
+    width: 50vw;
+    max-width: none;
+  }
+
+  .skeletonMap {
+    width: 50vw;
+    max-width: none;
+  }
 }
