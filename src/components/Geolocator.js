@@ -2,9 +2,10 @@
 import React, { useState, useEffect } from "react";
 
 // Custom functions
-import { callApi, formatKey } from "../helpers/functions";
+import { callApi } from "../helpers/functions";
 
 // Custom components
+import TableDisplay from "./TableDisplay";
 import MapView from "./MapView";
 
 // Custom strings
@@ -46,16 +47,7 @@ const Geolocator = () => {
         </>
       ) : (
         <>
-          <table>
-            <tbody>
-              {Object.entries(result).map(([key, value]) => (
-                <tr key={key}>
-                  <th>{formatKey(key)}</th>
-                  <td>{value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <TableDisplay result={result} />
           <MapView result={result} />
         </>
       )}
