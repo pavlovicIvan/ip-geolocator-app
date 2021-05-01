@@ -1,0 +1,40 @@
+table {
+  border-spacing: 1px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+th:first-child {
+  border-radius: 3px;
+}
+
+td:last-child {
+  border-radius: 3px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 7px 14px;
+}
+
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 600px) {
+  table {
+    width: 60vw;
+    max-width: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  table {
+    width: 30vw;
+    max-width: none;
+  }
+}

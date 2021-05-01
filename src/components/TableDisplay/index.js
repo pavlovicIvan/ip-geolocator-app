@@ -1,8 +1,11 @@
 // React
 import React from "react";
 
+// Style
+import styles from "./TableDisplay.module.css";
+
 // Custom functions
-import { formatKey } from "../helpers/functions";
+import { formatKey } from "../../helpers/functions";
 
 const TableDisplay = ({ result }) => (
   <table>

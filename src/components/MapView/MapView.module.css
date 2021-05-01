@@ -1,0 +1,28 @@
+.mapWrap {
+  border: 1px solid #dddddd;
+  margin-bottom: 1rem;
+  line-height: 0;
+}
+
+.skeletonMap {
+  border: 1px solid #c4c4c4;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  height: 300px;
+  width: 300px;
+}
+
+@media (min-width: 600px) {
+  .skeletonMap {
+    width: 60vw;
+    max-width: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skeletonMap {
+    width: 30vw;
+    max-width: none;
+  }
+}

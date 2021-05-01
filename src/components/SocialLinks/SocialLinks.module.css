@@ -1,0 +1,14 @@
+.socialLinksContainer {
+  margin: 2rem 0;
+}
+
+.linkImg {
+  height: 25px;
+  width: 25px;
+  padding-left: 10px;
+  transition: transform 0.2s;
+}
+
+.linkImg:hover {
+  transform: scale(1.2);
+}
