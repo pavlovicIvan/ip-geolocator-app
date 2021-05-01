@@ -1,0 +1,91 @@
+.containerMain {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 0.8rem;
+  margin-right: 0.8rem;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+input:focus {
+  border: 1px solid #575757;
+  outline: none;
+}
+
+input[type="submit"] {
+  padding: 0.8rem;
+  border: 1px solid #dddddd;
+  background-color: #dc0101;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+.validationText {
+  background-color: #dc0101;
+  padding: 0.4rem;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.skeletonTable {
+  border: 1px solid #c4c4c4;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  margin: 2rem 0 1rem 0;
+  height: 375px;
+  width: 300px;
+}
+
+.skeletonMap {
+  border: 1px solid #c4c4c4;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  height: 300px;
+  width: 300px;
+}
+
+@media (min-width: 600px) {
+  .skeletonTable {
+    width: 60vw;
+    max-width: none;
+  }
+
+  .skeletonMap {
+    width: 60vw;
+    max-width: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skeletonTable {
+    width: 30vw;
+    max-width: none;
+  }
+
+  .skeletonMap {
+    width: 30vw;
+    max-width: none;
+  }
+}

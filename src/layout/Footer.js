@@ -2,7 +2,7 @@
 import React from "react";
 
 // Custom components
-import SocialLinks from "../components/SocialLinks";
+import SocialLinks from "../components/SocialLinks/index";
 
 const Footer = () => (
   <div className="containerMainCenter">

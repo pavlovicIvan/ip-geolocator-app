@@ -2,7 +2,7 @@
 import React from "react";
 
 // Images
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo.svg";
 
 const Header = () => (
   <div className="containerMainCenter">

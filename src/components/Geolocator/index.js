@@ -3,11 +3,14 @@ import React, { useState, useEffect } from "react";
 import isIp from "is-ip";
 
 // Custom functions
-import { callApi } from "../helpers/functions";
+import { callApi } from "../../helpers/functions";
 
 // Custom components
-import TableDisplay from "./TableDisplay";
-import MapView from "./MapView";
+import TableDisplay from "../TableDisplay/index";
+import MapView from "../MapView/index";
+
+// Style
+import styles from "./Geolocator.module.css";
 
 // Custom strings
 const api = "https://freegeoip.app/json/";
@@ -38,7 +41,7 @@ const Geolocator = () => {
   };
 
   return (
-    <div className="containerMain">
+    <div className={styles.containerMain}>
       <form onSubmit={(event) => handleSearch(event)}>
         <input
           type="text"
@@ -48,12 +51,12 @@ const Geolocator = () => {
         <input type="submit" value="SEARCH" />
       </form>
       {validation && (
-        <div className="validationText"> IP address is not valid </div>
+        <div className={styles.validationText}> IP address is not valid </div>
       )}
       {loading ? (
         <>
-          <div className="skeletonTable" />
-          <div className="skeletonMap" />
+          <div className={styles.skeletonTable} />
+          <div className={styles.skeletonMap} />
         </>
       ) : (
         <>
