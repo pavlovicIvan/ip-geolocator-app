@@ -6,7 +6,7 @@ import githubImg from "../assets/images/github.svg";
 import linkedinImg from "../assets/images/linkedin.svg";
 
 const SocialLinks = ({ githubLink, linkedinLink }) => (
-  <div>
+  <div className="socialLinksContainer">
     <a href={githubLink} target="_blank" rel="noreferrer">
       <img className="linkImg" alt="github logo" src={githubImg} />
     </a>

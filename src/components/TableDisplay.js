@@ -10,7 +10,7 @@ const TableDisplay = ({ result }) => (
       {Object.entries(result).map(([key, value]) => (
         <tr key={key}>
           <th>{formatKey(key)}</th>
-          <td>{value}</td>
+          <td>{value || "-"}</td>
         </tr>
       ))}
     </tbody>
